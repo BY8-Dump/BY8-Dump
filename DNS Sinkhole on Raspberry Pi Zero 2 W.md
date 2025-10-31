@@ -42,22 +42,22 @@ This project focuses on DNS resolution. Using a Raspberry Pi to create a simple 
 4. After the updates, I set a reserved IP for the pi in my router settings to ensure I can use it as a DNS server.
 
 5. I again SSH into my pi and install the PiHole software using 'curl -sSL https://install.pi-hole.net | bash' 
-![[{F7AB367F-D3DF-4940-B169-9465A52F7301}.png]]
+
 
 6. As part of the installer for PiHole, it asks if we want to set an upstream DNS server, I will take this opportunity to add some built in security at the DNS server end. I will set the upstream DNS server to 1.0.0.2 which is a CloudFlare DNS that has built in malware protection as well as fast speeds.
 
 7. With the PiHole software installed, the first thing ill do is set a new password for PiHole to improve security.
-![[{425AD002-FEB1-4F5C-B4B8-B12D866BFD18}.png]]
+
 
 8. We will log into the pihole server in our browser and add more blocklists to the pi. Some great blocklists can be found on Firebog.net
 
 9. Im going to add 2 lists for each category: Suspicious Lists, Advertising Lists, Tracking & Telemetry Lists and Malicious Lists. This will increase the security of my home network and devices massively.
-![[{3CCAA280-C7E2-4DE5-8FB7-AC03324C6FEB}.png]]
+
 
 10. Now we must run 'pihole -g' to update gravity. This retrieves the lists back down to the pi and allows it to block them.
 
 11. When we go to the dashboard, we can see that we are actively blocking 320,907 domains.
-![[{97D58768-B25A-43F4-B29B-A8CD71F9B774}.png]]
+
 
 12. After tweaking a few minor settings we have the PI running how we want.
 
@@ -68,7 +68,7 @@ This project focuses on DNS resolution. Using a Raspberry Pi to create a simple 
 ## Testing
 
 Looking at the dashboard we can see that the pi is already blocking traffic.
-![[{68B47858-5CBC-45B0-89E4-7A7939325DE1}.png]]
+
 
 We can also test this using a tool called AdBlock Tester. The pi passes multiple tests but fails others like banner and gif ads. We will add more lists to the blocklist to help eliminate these failures. We will be sure to use 'pihole -g' to ensure the software grabs the lists.
 
@@ -76,7 +76,6 @@ After adding a few more lists focused towards advertisements, our score improves
 
 I researched more up to date blocklists and imported to PiHole, after testing again we score 81/100. I am yet to receive any false positives or commonly used services blocked.
 
-![[{889B3ADB-1E53-4672-81BA-6FAFB425812B}.png]]
 One final check of the PiHole confirms that the DNS sinkhole is working well and blocking potentially dangerous traffic.
 
 ---
