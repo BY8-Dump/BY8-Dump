@@ -6,7 +6,7 @@
 
 <h2>Cyber Security Projects</h2>
 
-- Coming soon
+- [SIEM Project - Implimentation of SIEM across multiple Virtual Machines](https://github.com/BY8-Dump/SIEM-Project/blob/main/SIEM-Project.md)
 
 <h2>Software Projects</h2>
 
