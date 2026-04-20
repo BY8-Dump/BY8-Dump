@@ -13,4 +13,4 @@
 - Coming Soon
 <h2> Connect with me:</h2>
 
-[linkedin](www.linkedin.com/in/brandon-lamont-809a9b335)
+[linkedin](https://www.linkedin.com/in/brandon-lamont-809a9b335)
